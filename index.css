@@ -1,0 +1,107 @@
+h2 {
+    margin: 0;
+}
+
+.game {
+    width: 800px;
+    height: 550px;
+    border: 2px solid;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.game .sky {
+    background: url('./img/sky.png');
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.game .land {
+    background: url('./img/land.png');
+    height: 112px;
+    width: 200%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.game .bird {
+    background: url('./img/bird.png');
+    position: absolute;
+    width: 33px;
+    height: 26px;
+    left: 150px;
+    top: 150px;
+}
+
+.game .bird.swing1 {
+    background-position: -8px -10px;
+}
+
+.game .bird.swing2 {
+    background-position: -60px -10px;
+}
+
+.game .bird.swing3 {
+    background-position: -113px -10px;
+}
+
+.pipe {
+    position: absolute;
+    height: 100px;
+    width: 52px;
+    left: 500px;
+}
+
+.pipe.up {
+    background: url('./img/pipeDown.png');
+    top: 0;
+    background-position: bottom;
+}
+
+.pipe.down {
+    background: url('./img/pipeUp.png');
+    bottom: 112px;
+}
+
+.info {
+    text-align: center;
+}
+
+/* 结束，暂停遮罩层 */
+.game .over {
+    width: 800px;
+    height: 550px;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, .2);
+    /* display: none; */
+    z-index: 100;
+}
+.game .over h2 {
+    color: #fff;
+    font-size: 50px;
+}
+.game .over p {
+    font-size: 20px;
+    color: #eee;
+}
+
+/* 分数统计 */
+.game .score {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-top: 15px;
+    z-index: 200;
+}
